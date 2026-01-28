@@ -1,0 +1,410 @@
+/* ============================================
+   FETHIYE İK - RESPONSIVE STYLESHEET
+   Mobile-First Breakpoints
+   ============================================ */
+
+/* ===== MOBILE (Base - 320px+) ===== */
+/* Mobile styles are the default in main.css and components.css */
+
+/* ===== CRITICAL MOBILE OVERFLOW FIXES ===== */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Ensure all content respects viewport width */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fix sections that may overflow */
+section {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Ensure header container fits properly */
+.header-container {
+    flex-wrap: nowrap;
+    overflow: visible;
+}
+
+/* ===== HAMBURGER MENU VISIBILITY FIX ===== */
+.mobile-menu-btn {
+    display: flex !important;
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+/* Ensure theme toggle doesn't push hamburger off */
+.theme-toggle {
+    flex-shrink: 0;
+}
+
+/* Logo should not overflow */
+.logo-text .sub {
+    white-space: nowrap;
+}
+
+/* ===== STORY SECTION OVERFLOW FIX ===== */
+.story-grid,
+.story-visual {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.story-visual img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== TESTIMONIALS OVERFLOW FIX ===== */
+.testimonials-slider {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ===== VALUES/STATS GRID FIX ===== */
+.values-grid,
+.team-stats {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Hide elements on mobile */
+.desktop-only {
+    display: none !important;
+}
+
+/* ===== SMALL TABLET (640px+) ===== */
+@media (min-width: 640px) {
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials */
+    .testimonials-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Cards */
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Us Features */
+    .why-us-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== TABLET (768px+) ===== */
+@media (min-width: 768px) {
+
+    /* Hide mobile CTA bar on tablet+ */
+    .mobile-cta-bar {
+        display: none;
+    }
+
+    /* Larger container padding */
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    /* Services Grid - 2 columns */
+    .services-grid {
+        gap: var(--space-2xl);
+    }
+
+    /* Process Timeline horizontal hint */
+    .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Story Grid - 2 columns */
+    .story-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Values Grid - 4 columns */
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== DESKTOP (1024px+) ===== */
+@media (min-width: 1024px) {
+
+    /* Navigation */
+    .main-nav {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: none !important;
+    }
+
+    .header-cta {
+        display: flex;
+    }
+
+    /* Desktop only elements */
+    .desktop-only {
+        display: block !important;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+
+    /* Hero Section - 2 columns */
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-visual {
+        display: block;
+    }
+
+    /* Services Grid - 3 columns */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Testimonials - 3 columns */
+    .testimonials-slider {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Why Us Grid - 2 columns */
+    .why-us-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Process Timeline - 4 columns */
+    .process-timeline {
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+    }
+
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-md);
+    }
+
+    .step-icon {
+        margin-left: 0;
+        margin-top: var(--space-md);
+    }
+
+    /* Hero adjustments */
+    .hero-title {
+        font-size: var(--text-5xl);
+    }
+
+    .trust-indicators {
+        gap: var(--space-3xl);
+    }
+
+    /* CTA Content */
+    .cta-content {
+        padding: var(--space-4xl) var(--space-3xl);
+    }
+}
+
+/* ===== LARGE DESKTOP (1280px+) ===== */
+@media (min-width: 1280px) {
+
+    /* Larger fonts for headings */
+    :root {
+        --text-5xl: 4rem;
+    }
+
+    /* Hero visual sizing */
+    .hero-image-wrapper {
+        max-width: 550px;
+        margin-left: auto;
+    }
+
+    /* Bigger service cards */
+    .service-card {
+        padding: var(--space-3xl);
+    }
+
+    /* Floating cards positioning */
+    .floating-card.card-1 {
+        left: -50px;
+    }
+
+    .floating-card.card-2 {
+        right: -50px;
+    }
+
+    /* Stats overlay */
+    .stats-card {
+        padding: var(--space-xl) var(--space-3xl);
+    }
+}
+
+/* ===== EXTRA LARGE (1536px+) ===== */
+@media (min-width: 1536px) {
+    .container {
+        max-width: var(--container-2xl);
+    }
+
+    /* Even larger hero */
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        gap: var(--space-4xl);
+    }
+
+    /* Grid gaps */
+    .services-grid {
+        gap: var(--space-3xl);
+    }
+
+    .footer-grid {
+        gap: var(--space-3xl);
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+
+    .site-header,
+    .mobile-cta-bar,
+    .mobile-menu-overlay,
+    .scroll-indicator,
+    .cta-section {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2cm 0;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .floating-shapes::before,
+    .floating-shapes::after,
+    .floating-card,
+    .scroll-arrow {
+        animation: none !important;
+    }
+}
+
+/* ===== DARK MODE PREPARATION ===== */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment when ready for dark mode
+  :root {
+    --white: #1E293B;
+    --off-white: #0F172A;
+    --near-black: #F8FAFC;
+    --dark-gray: #94A3B8;
+    --light-gray: #334155;
+  }
+  */
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+
+    .glass-card,
+    .glass-premium {
+        background: var(--white);
+        border: 2px solid var(--near-black);
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Larger touch targets */
+    .btn {
+        min-height: 48px;
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    .main-nav a {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    /* Remove hover effects that don't work on touch */
+    .glass-card:hover {
+        transform: none;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    .floating-card {
+        animation: none;
+    }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-4xl) 0;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}

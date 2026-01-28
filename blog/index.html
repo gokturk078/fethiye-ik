@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fethiye İK Blog | Bakıcı Hizmetleri ve Personel Rehberi</title>
+    <meta name="description"
+        content="Fethiye'de bakıcı fiyatları, çalışma izni süreçleri ve yaşlı bakımı hakkında uzman yazılar ve rehberler.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fethiyeik.com/blog/">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <style>
+        .blog-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: -50px;
+            padding-bottom: 80px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .article-thumb {
+            height: 200px;
+            background: #cbd5e1;
+            position: relative;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-meta {
+            font-size: 0.9em;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            color: #1e293b;
+        }
+
+        .read-more {
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-text">
+                    <span class="main">Fethiye İK</span>
+                    <span class="sub">Bakım Hizmetleri</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Ana Sayfa</a></li>
+                    <li><a href="../hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-dropdown">
+                        <a href="../hizmetler/" class="dropdown-toggle">Hizmetler</a>
+                        <div class="dropdown-menu">
+                            <a href="../hizmetler/yasli-bakim.html">Yaşlı Bakımı</a>
+                            <a href="../hizmetler/cocuk-bakim.html">Çocuk Bakımı</a>
+                            <a href="../hizmetler/ev-yardimci.html">Ev Yardımcısı</a>
+                            <a href="../hizmetler/personel-temini.html">Personel Temini</a>
+                            <a href="../hizmetler/vize-oturma-izni.html">Vize & Oturma İzni</a>
+                        </div>
+                    </li>
+                    <li><a href="../referanslar.html">Referanslar</a></li>
+                    <li><a href="../iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="tel:+905064248555" class="btn btn-primary">Hemen Arayın</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../hakkimizda.html">Hakkımızda</a>
+            <a href="../hizmetler/">Hizmetler</a>
+            <a href="../referanslar.html">Referanslar</a>
+            <a href="../iletisim.html">İletişim</a>
+        </nav>
+        <div class="mobile-cta">
+            <a href="tel:+905064248555" class="btn btn-primary btn-large">Hemen Arayın</a>
+        </div>
+    </div>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">Bilgi Merkezi</h1>
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Fethiye'de bakım hizmetleri,
+                çalışma izinleri ve personel yönetimi hakkında uzman rehberler.</p>
+        </div>
+    </section>
+
+    <!-- POSTS GRID -->
+    <section>
+        <div class="container">
+            <div class="article-grid">
+
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-thumb" style="background: linear-gradient(45deg, #3b82f6, #06b6d4);">
+                        <span class="category-tag">Rehber</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">23 Ocak 2026 • 5 dk okuma</div>
+                        <h2 class="article-title"><a href="fethiye-bakici-ucretleri-2026.html"
+                                style="color: inherit; text-decoration: none;">2026 Fethiye Bakıcı ve Personel Ücretleri
+                                Rehberi</a></h2>
+                        <p style="color: #64748b; margin-bottom: 20px; line-height: 1.6;">Yatılı bakıcı, gündüzlü
+                            yardımcı ve sezonluk personel maaşları ne kadar? Fethiye piyasa analizi.</p>
+                        <a href="fethiye-bakici-ucretleri-2026.html" class="read-more">Devamını Oku →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-thumb" style="background: linear-gradient(45deg, #8b5cf6, #d946ef);">
+                        <span class="category-tag">Yasal Süreç</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">20 Ocak 2026 • 7 dk okuma</div>
+                        <h2 class="article-title"><a href="yabanci-bakici-calisma-izni.html"
+                                style="color: inherit; text-decoration: none;">Yabancı Bakıcı Çalışma İzni Nasıl Alınır?
+                                (Adım Adım)</a></h2>
+                        <p style="color: #64748b; margin-bottom: 20px; line-height: 1.6;">Yabancı uyruklu personel için
+                            çalışma izni başvurusu, gerekli evraklar ve dikkat edilmesi gerekenler.</p>
+                        <a href="yabanci-bakici-calisma-izni.html" class="read-more">Devamını Oku →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-thumb" style="background: linear-gradient(45deg, #10b981, #f59e0b);">
+                        <span class="category-tag">Devlet Desteği</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">15 Ocak 2026 • 4 dk okuma</div>
+                        <h2 class="article-title"><a href="yasli-bakimi-devlet-destegi.html"
+                                style="color: inherit; text-decoration: none;">Evde Bakım Maaşı ve Devlet Destekleri
+                                2026</a></h2>
+                        <p style="color: #64748b; margin-bottom: 20px; line-height: 1.6;">Yaşlı ve hasta bakımı için
+                            devlet tarafından sağlanan maddi destekler ve başvuru şartları.</p>
+                        <a href="yasli-bakimi-devlet-destegi.html" class="read-more">Devamını Oku →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about">
+                        <div class="logo-text">
+                            <span class="main" style="color: var(--white);">Fethiye İK</span>
+                            <span class="sub" style="color: var(--accent-turquoise);">Bakım Hizmetleri</span>
+                        </div>
+                        <p class="footer-desc">Fethiye'nin güvenilir adresi. 10+ yıldır ailelerinize profesyonel bakım
+                            hizmetleri sunuyoruz.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Hizmetler</h4>
+                        <ul class="footer-links">
+                            <li><a href="../hizmetler/yasli-bakim.html">Yaşlı Bakımı</a></li>
+                            <li><a href="../hizmetler/cocuk-bakim.html">Çocuk Bakımı</a></li>
+                            <li><a href="../hizmetler/ev-yardimci.html">Ev Yardımcısı</a></li>
+                            <li><a href="../hizmetler/personel-temini.html">Personel Temini</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Hizmet Bölgeleri</h4>
+                        <ul class="footer-links">
+                            <li><a href="../hizmet-bolgeleri/oludeniz-bakici-hizmeti.html">Ölüdeniz</a></li>
+                            <li><a href="../hizmet-bolgeleri/gocek-bakici-personel.html">Göcek</a></li>
+                            <li><a href="../hizmet-bolgeleri/calis-bakici-hizmeti.html">Çalış</a></li>
+                            <li><a href="../hizmet-bolgeleri/ovacik-bakici-hizmeti.html">Ovacık</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-contact">
+                        <h4 class="footer-title">İletişim</h4>
+                        <ul class="contact-list">
+                            <li><a href="tel:+905064248555">+90 506 424 85 55</a></li>
+                            <li><span>Fethiye, Muğla</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">© 2024 Fethiye İK. Tüm hakları saklıdır.</p>
+                <p class="footer-creator" style="font-size: 0.8rem; opacity: 0.7; margin-top: 5px;">Created by Göktürk
+                    Kahriman</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
